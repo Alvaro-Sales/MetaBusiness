@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-body: #222222;
+  --color-one: #222222;
+  --color-two: #281358;
+  --color-three: #4f358b;
+  --text-color: #f2f2f2;
+  --text-black: #222222;
+}
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text-color);
+}
+
+
+/* Estilo da home page */
+.menuDrop {
+  border-radius: 10px 0 10px 10px;
+}
+
+.containerHome {
+  height: calc(100vh - 40px);
+}
+
+.containerAbout {
+  height: calc(100vh - 40px);
+}
+
+h1.textAnimate {
+  transition: all 0.5s ease-in-out;
+  animation: textAnimate 1s ease-in-out;
+}
+
+p.textAnimate {
+  transition: all 0.5s ease-in-out;
+  animation: textAnimate 1.5s ease-in-out;
+}
+
+@keyframes textAnimate {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.btnAnimate {
+  animation: btn 2s ease-in-out;
+}
+
+@keyframes btn {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.animateNotebook {
+  transition: all 0.5s ease-in-out;
+  animation: notebook 1.5s ease-in-out;
+}
+
+@keyframes notebook {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+
+/* Estilo da página de projetos */
+.titleSection {
+  transition: all 0.5s ease-in-out;
+  animation: title 2s ease-in-out;
+}
+
+@keyframes title {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.imgCard {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cardAnime {
+  transition: all 0.5s ease-in-out;
+  animation: card 2s ease-in-out;
+}
+
+@keyframes card {
+  from {
+    opacity: 0;
+    transform: translateX(1080px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+
+/* Estilo da página sobre nós */
+.imgAbout {
+  transition: all 0.5s ease-in-out;
+  animation: imgAbout 2s ease-in-out;
+}
+
+@keyframes imgAbout {
+  from {
+    opacity: 0;
+    transform: translateX(180px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+
+@media screen and (max-width: 1610px) {
+  .containerAbout {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+}

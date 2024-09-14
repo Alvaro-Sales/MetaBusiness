@@ -155,3 +155,15 @@ p.textAnimate {
     flex-direction: column-reverse;
   }
 }
+
+
+@media screen and (max-width: 800px) {
+  .containerAbout {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    min-height: 100vh;
+    height: auto;
+    padding-top: 8vh;
+  }
+}

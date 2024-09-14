@@ -7,8 +7,11 @@ module.exports = {
   ],
   theme: {
     screens: {
+      'desktop': {'min': '1256px'},
+      'desktop2': {'max': '1257px'},
       'laptop': {'max': '1200px'},
       'tabletG': {'max': '1040px'},
+      'mobile': {'max': '850px'},
     },
   },
   plugins: [],

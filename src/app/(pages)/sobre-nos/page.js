@@ -7,8 +7,8 @@ export default function SobreNos() {
             <main>
                 <div className="flex flex-col items-center w-full bg-center bg-cover bg-fixed bg-[url('/images/bg-top.svg')]">
 
-                    <div className="containerAbout flex items-center justify-between  flex-wrap-reverse max-w-[1800px] w-full gap-10 pt-[6vh] px-40">
-                        <div className="max-w-[850px]">
+                    <div className="containerAbout flex items-center justify-between flex-wrap-reverse max-w-[1800px] w-full gap-10 pt-[6vh] px-40 laptop:px-10 mobile:gap-x-5 mobile:justify-center">
+                        <div className="max-w-[850px] mobile:max-w-[100vw] mobile:flex mobile:flex-col mobile:items-center mobile:justify-center">
                             <h1 className="titleSection text-center text-3xl tracking-wide">
                                 Um pouco sobre nós.
                             </h1>

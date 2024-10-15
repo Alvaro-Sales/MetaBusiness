@@ -28,7 +28,7 @@ export default function Projetos() {
                             }
                             title={'Plataforma Sales'}
                             description={'Website desenvolvido para auxílio na consulta de informações sobre planos de linha móvel vendidos pela empresa Claro, essa plataforma feita para os representantes de telemarketing.'}
-                            link="https://plataforma-sales.vercel.app"
+                            link="#"
                         />
 
                         {/* --------------- Card 2 --------------- */}

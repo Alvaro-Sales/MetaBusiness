@@ -1,79 +1,50 @@
-'use client'
-
 import "./globals.css"
 import Link from "next/link"
 import Image from "next/image"
-import { IoLogoGithub, IoLogoInstagram, IoLogoWhatsapp } from "react-icons/io5"
+import { IoRocketOutline } from "react-icons/io5"
+import { MdOutlineImportantDevices } from "react-icons/md"
 
 export default function Home() {
-	return(
-		<>
-			<div className="w-screen h-screen max-w-full">
-				<section className="sobreMim min-w-full min-h-full flex items-center justify-around px-12 box-border tablet:flex-col tablet:max-w-full tablet:max-h-full tablet:justify-center tablet:gap-y-5">
-					<div className="foto max-w-[45%] tablet:max-w-full flex flex-col items-center justify-center">
-						<Image 
-							src="/images/logo.svg"
-							alt="logotipo do desenvolvedor em formato de letra 'A'"
-							width={300}
-							height={233}
+	return (
+    	<>
+			<main>
+				<div className="containerHome flex items-center justify-center p-20 pb-5 laptop:p-10 laptop:pb-5 gap-20 tabletG:gap-10 tabletG:flex-col-reverse w-full bg-center bg-cover bg-[url('/images/bg-top.svg')] flex-wrap">
+					<div className="text-white max-w-[50%] w-[700px] tabletG:max-w-[90%] flex flex-col items-center">
+						<h1 className="text-3xl text-center mb-5 textAnimate">Está com dificuldade para se destacar?</h1>
+
+						<p className="text-base text-justify mb-10 textAnimate">Conheça os nossos serviços e projetos que com certeza irão te deixar sempre à frente da concorrência! Aqui a sua identidade visual é prioridade e vamos transformala para ter muito mais personalidade e potencial.</p>
+
+						<div className="w-full flex items-center justify-center gap-5 flex-wrap mobile:flex-col">
+							<button className="w-[280px] bg-[var(--color-three)] rounded-xl hover:bg-[var(--color-two)] hover:text-[var(--text-color)] transition-all duration-300 btnAnimate">
+								{/* link que direciona para o Whatsapp http://wa.me/5582993263814?text=Oii%20MetaBusiness%20 */}
+								<Link href="#" className="flex items-center justify-center px-5 py-2 bg-transparent gap-5 rounded-xl desktop2:px-3">
+									<span className="text-xl tracking-wider uppercase">Sair na frente</span>
+									<IoRocketOutline className="text-4xl" />
+								</Link>
+							</button>
+							
+							<button className="w-[280px] bg-[var(--color-three)] rounded-xl hover:bg-[var(--color-two)] hover:text-[var(--text-color)] transition-all duration-300 btnAnimate">
+								<Link href="./projetos" className="flex items-center justify-center px-5 py-2 bg-transparent gap-5 rounded-xl desktop2:px-3">
+									<span className="text-xl tracking-wider uppercase">Ver Projetos</span>
+									<MdOutlineImportantDevices className="text-4xl" />
+								</Link>
+							</button>
+						</div>
+					</div>
+
+					<div className="flex items-center justify-center max-w-[50%] max-h-full mobile:h-[326px] mobile:w-[400px] mobile:max-w-full">
+						<Image
+							src="/images/notebook-logo.png"
+							alt="Notebook com o logotipo da agência Meta Business na tela"
+							width={400}
+							height={326}
 							priority={true}
 							quality={100}
-							className="h-auto rounded-3xl"
+							className="animateNotebook"
 						/>
 					</div>
-
-					<div className="text max-w-[55%] h-full tablet:max-w-full">
-						<div className="part1 flex flex-col mb-5">
-							<h1 className="text-4xl mb-5 text-[var(--blue)]">Sobre mim</h1>
-
-							<h2 className="mb-3 text-3xl">Algumas coisas sobre mim...</h2>
-
-							<p className="text-justify transition-all duration-1000 opacity-0">Olá, seja bem-vindo ao meu portfólio, meu nome é Álvaro Sales, tenho 19 anos, sou estudante de desenvolvimento web e atualmente sou desenvolvedor Front-End.</p>
-						</div>
-
-						<div className="part2" id="Contato">
-							<h2 className="inline-block transition-all duration-500 transform origin-right scale-x-0 text-3xl mb-3 tracking-wider">Para entrar em contato comigo?</h2>
-
-							<p className="text-justify">Você pode entrar em contato atravez do meu telefone ou Email.</p>
-
-							<p className="text-justify">Telefone: (82) 99326-3814</p>
-							 
-							<p className="text-justify">Email: contato.alvarosales@gmail.com</p>
-
-							<div className="links flex items-center justify-start mt-5">
-								<button className="btn1 border-none font-bold tracking-wider rounded-md bg-transparent mr-8">
-									<Link href="/projetos" className="text-[var(--white)] py-2 px-5 rounded-md transition-all duration-500 bg-transparent border-2 border-[var(--white)] hover:bg-[var(--blue)] hover:border-2 hover:border-transparent">Ver projetos</Link>
-								</button>
-
-								<div className="social flex items-center gap-3">
-									<Link 
-									href="http://wa.me/5582993263814?text=Oii%20%C3%81lvaro,%20quero%20contratar%20seus%20servi%C3%A7os!%20" 
-									target="_blank" 
-									title="Whatsapp" 
-									alt="Logo da rede social Whatsapp">
-										<IoLogoWhatsapp className="text-4xl text-[var(--white)] transition-colors duration-300 hover:text-[var(--blue)]"/>
-									</Link>
-
-									<Link 
-									href="https://www.instagram.com/alvarosales.tech/" 
-									alt="Logo da rede social Instagram" 
-									target="_blank" 
-									title="Instagram">
-										<IoLogoInstagram className="text-4xl text-[var(--white)] transition-colors duration-300 hover:text-[var(--blue)]"/>
-									</Link>
-
-									<Link href="https://github.com/Alvaro-Sales/" 
-									alt="Logo do site github" 
-									title="Github" 
-									target="_blank">
-										<IoLogoGithub className="text-4xl text-[var(--white)] transition-colors duration-300 hover:text-[var(--blue)]"/>
-									</Link>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</div>
+				</div>
+    		</main>
 		</>
 	)
 }
